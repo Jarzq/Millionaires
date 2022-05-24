@@ -2,7 +2,6 @@ C:\Users\Tomasz\Desktop\projektTest\projektTest\bin\Debug\projektTest.exe.config
 C:\Users\Tomasz\Desktop\projektTest\projektTest\bin\Debug\projektTest.exe
 C:\Users\Tomasz\Desktop\projektTest\projektTest\bin\Debug\projektTest.pdb
 C:\Users\Tomasz\Desktop\projektTest\projektTest\obj\Debug\projektTest.csproj.AssemblyReference.cache
-C:\Users\Tomasz\Desktop\projektTest\projektTest\obj\Debug\projektTest.Form1.resources
 C:\Users\Tomasz\Desktop\projektTest\projektTest\obj\Debug\projektTest.Properties.Resources.resources
 C:\Users\Tomasz\Desktop\projektTest\projektTest\obj\Debug\projektTest.csproj.GenerateResource.cache
 C:\Users\Tomasz\Desktop\projektTest\projektTest\obj\Debug\projektTest.csproj.CoreCompileInputs.cache
@@ -18,3 +17,4 @@ C:\Users\Tomasz\Desktop\nowyTest\Millionaires\projektTest\obj\Debug\projektTest.
 C:\Users\Tomasz\Desktop\nowyTest\Millionaires\projektTest\obj\Debug\projektTest.exe
 C:\Users\Tomasz\Desktop\nowyTest\Millionaires\projektTest\obj\Debug\projektTest.pdb
 C:\Users\Tomasz\Desktop\nowyTest\Millionaires\projektTest\obj\Debug\projektTest.FormMain.resources
+C:\Users\Tomasz\Desktop\projektTest\projektTest\obj\Debug\projektTest.FormMain.resources

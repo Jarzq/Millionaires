@@ -30,7 +30,7 @@ namespace projektTest
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.ButtonAnswerA = new System.Windows.Forms.Button();
+            this.buttonAnswerA = new System.Windows.Forms.Button();
             this.buttonAnswerB = new System.Windows.Forms.Button();
             this.buttonAnswerC = new System.Windows.Forms.Button();
             this.buttonAnswerD = new System.Windows.Forms.Button();
@@ -51,23 +51,25 @@ namespace projektTest
             this.labelQuestion = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.labelClock = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelRightSite.SuspendLayout();
             this.panelQuestionAnswer.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ButtonAnswerA
+            // buttonAnswerA
             // 
-            this.ButtonAnswerA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ButtonAnswerA.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ButtonAnswerA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonAnswerA.ForeColor = System.Drawing.Color.AliceBlue;
-            this.ButtonAnswerA.Location = new System.Drawing.Point(8, 69);
-            this.ButtonAnswerA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ButtonAnswerA.Name = "ButtonAnswerA";
-            this.ButtonAnswerA.Size = new System.Drawing.Size(253, 53);
-            this.ButtonAnswerA.TabIndex = 0;
-            this.ButtonAnswerA.Text = "button1";
-            this.ButtonAnswerA.UseVisualStyleBackColor = false;
+            this.buttonAnswerA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAnswerA.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonAnswerA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAnswerA.ForeColor = System.Drawing.Color.AliceBlue;
+            this.buttonAnswerA.Location = new System.Drawing.Point(11, 85);
+            this.buttonAnswerA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAnswerA.Name = "buttonAnswerA";
+            this.buttonAnswerA.Size = new System.Drawing.Size(337, 65);
+            this.buttonAnswerA.TabIndex = 0;
+            this.buttonAnswerA.Text = "button1";
+            this.buttonAnswerA.UseVisualStyleBackColor = false;
             // 
             // buttonAnswerB
             // 
@@ -75,13 +77,14 @@ namespace projektTest
             this.buttonAnswerB.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonAnswerB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAnswerB.ForeColor = System.Drawing.Color.AliceBlue;
-            this.buttonAnswerB.Location = new System.Drawing.Point(265, 69);
-            this.buttonAnswerB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAnswerB.Location = new System.Drawing.Point(353, 85);
+            this.buttonAnswerB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerB.Name = "buttonAnswerB";
-            this.buttonAnswerB.Size = new System.Drawing.Size(257, 53);
+            this.buttonAnswerB.Size = new System.Drawing.Size(343, 65);
             this.buttonAnswerB.TabIndex = 1;
             this.buttonAnswerB.Text = "button2";
             this.buttonAnswerB.UseVisualStyleBackColor = false;
+            this.buttonAnswerB.Click += new System.EventHandler(this.buttonAnswerB_Click);
             // 
             // buttonAnswerC
             // 
@@ -89,10 +92,10 @@ namespace projektTest
             this.buttonAnswerC.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonAnswerC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAnswerC.ForeColor = System.Drawing.Color.AliceBlue;
-            this.buttonAnswerC.Location = new System.Drawing.Point(8, 126);
-            this.buttonAnswerC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAnswerC.Location = new System.Drawing.Point(11, 155);
+            this.buttonAnswerC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerC.Name = "buttonAnswerC";
-            this.buttonAnswerC.Size = new System.Drawing.Size(253, 53);
+            this.buttonAnswerC.Size = new System.Drawing.Size(337, 65);
             this.buttonAnswerC.TabIndex = 2;
             this.buttonAnswerC.Text = "button3";
             this.buttonAnswerC.UseVisualStyleBackColor = false;
@@ -103,10 +106,10 @@ namespace projektTest
             this.buttonAnswerD.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonAnswerD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAnswerD.ForeColor = System.Drawing.Color.AliceBlue;
-            this.buttonAnswerD.Location = new System.Drawing.Point(265, 126);
-            this.buttonAnswerD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAnswerD.Location = new System.Drawing.Point(353, 155);
+            this.buttonAnswerD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerD.Name = "buttonAnswerD";
-            this.buttonAnswerD.Size = new System.Drawing.Size(257, 53);
+            this.buttonAnswerD.Size = new System.Drawing.Size(343, 65);
             this.buttonAnswerD.TabIndex = 3;
             this.buttonAnswerD.Text = "button4";
             this.buttonAnswerD.UseVisualStyleBackColor = false;
@@ -127,19 +130,18 @@ namespace projektTest
             this.panelRightSite.Controls.Add(this.label2prize);
             this.panelRightSite.Controls.Add(this.label1prize);
             this.panelRightSite.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelRightSite.Location = new System.Drawing.Point(538, 0);
-            this.panelRightSite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelRightSite.Location = new System.Drawing.Point(718, 0);
+            this.panelRightSite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelRightSite.Name = "panelRightSite";
-            this.panelRightSite.Size = new System.Drawing.Size(241, 721);
+            this.panelRightSite.Size = new System.Drawing.Size(321, 887);
             this.panelRightSite.TabIndex = 4;
             // 
             // label12prize
             // 
             this.label12prize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label12prize.Location = new System.Drawing.Point(12, 98);
-            this.label12prize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12prize.Location = new System.Drawing.Point(16, 121);
             this.label12prize.Name = "label12prize";
-            this.label12prize.Size = new System.Drawing.Size(220, 44);
+            this.label12prize.Size = new System.Drawing.Size(293, 54);
             this.label12prize.TabIndex = 11;
             this.label12prize.Text = "label9";
             this.label12prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -147,10 +149,9 @@ namespace projektTest
             // label11prize
             // 
             this.label11prize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label11prize.Location = new System.Drawing.Point(12, 150);
-            this.label11prize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11prize.Location = new System.Drawing.Point(16, 185);
             this.label11prize.Name = "label11prize";
-            this.label11prize.Size = new System.Drawing.Size(220, 44);
+            this.label11prize.Size = new System.Drawing.Size(293, 54);
             this.label11prize.TabIndex = 10;
             this.label11prize.Text = "label10";
             this.label11prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,10 +159,9 @@ namespace projektTest
             // label10prize
             // 
             this.label10prize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label10prize.Location = new System.Drawing.Point(12, 202);
-            this.label10prize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10prize.Location = new System.Drawing.Point(16, 249);
             this.label10prize.Name = "label10prize";
-            this.label10prize.Size = new System.Drawing.Size(220, 44);
+            this.label10prize.Size = new System.Drawing.Size(293, 54);
             this.label10prize.TabIndex = 9;
             this.label10prize.Text = "label11";
             this.label10prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,10 +169,9 @@ namespace projektTest
             // label9prize
             // 
             this.label9prize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label9prize.Location = new System.Drawing.Point(12, 254);
-            this.label9prize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9prize.Location = new System.Drawing.Point(16, 313);
             this.label9prize.Name = "label9prize";
-            this.label9prize.Size = new System.Drawing.Size(220, 44);
+            this.label9prize.Size = new System.Drawing.Size(293, 54);
             this.label9prize.TabIndex = 8;
             this.label9prize.Text = "label12";
             this.label9prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -180,10 +179,9 @@ namespace projektTest
             // label8prize
             // 
             this.label8prize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label8prize.Location = new System.Drawing.Point(12, 306);
-            this.label8prize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8prize.Location = new System.Drawing.Point(16, 377);
             this.label8prize.Name = "label8prize";
-            this.label8prize.Size = new System.Drawing.Size(220, 44);
+            this.label8prize.Size = new System.Drawing.Size(293, 54);
             this.label8prize.TabIndex = 7;
             this.label8prize.Text = "label5";
             this.label8prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -191,10 +189,9 @@ namespace projektTest
             // label7prize
             // 
             this.label7prize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label7prize.Location = new System.Drawing.Point(12, 358);
-            this.label7prize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7prize.Location = new System.Drawing.Point(16, 441);
             this.label7prize.Name = "label7prize";
-            this.label7prize.Size = new System.Drawing.Size(220, 44);
+            this.label7prize.Size = new System.Drawing.Size(293, 54);
             this.label7prize.TabIndex = 6;
             this.label7prize.Text = "label6";
             this.label7prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,10 +199,9 @@ namespace projektTest
             // label6prize
             // 
             this.label6prize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label6prize.Location = new System.Drawing.Point(12, 409);
-            this.label6prize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6prize.Location = new System.Drawing.Point(16, 503);
             this.label6prize.Name = "label6prize";
-            this.label6prize.Size = new System.Drawing.Size(220, 44);
+            this.label6prize.Size = new System.Drawing.Size(293, 54);
             this.label6prize.TabIndex = 5;
             this.label6prize.Text = "label7";
             this.label6prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -213,10 +209,9 @@ namespace projektTest
             // label5prize
             // 
             this.label5prize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label5prize.Location = new System.Drawing.Point(12, 461);
-            this.label5prize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5prize.Location = new System.Drawing.Point(16, 567);
             this.label5prize.Name = "label5prize";
-            this.label5prize.Size = new System.Drawing.Size(220, 44);
+            this.label5prize.Size = new System.Drawing.Size(293, 54);
             this.label5prize.TabIndex = 4;
             this.label5prize.Text = "label8";
             this.label5prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -224,10 +219,9 @@ namespace projektTest
             // label4prize
             // 
             this.label4prize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label4prize.Location = new System.Drawing.Point(12, 512);
-            this.label4prize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4prize.Location = new System.Drawing.Point(16, 630);
             this.label4prize.Name = "label4prize";
-            this.label4prize.Size = new System.Drawing.Size(220, 44);
+            this.label4prize.Size = new System.Drawing.Size(293, 54);
             this.label4prize.TabIndex = 3;
             this.label4prize.Text = "label3";
             this.label4prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -235,10 +229,9 @@ namespace projektTest
             // label3prize
             // 
             this.label3prize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label3prize.Location = new System.Drawing.Point(12, 564);
-            this.label3prize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3prize.Location = new System.Drawing.Point(16, 694);
             this.label3prize.Name = "label3prize";
-            this.label3prize.Size = new System.Drawing.Size(220, 44);
+            this.label3prize.Size = new System.Drawing.Size(293, 54);
             this.label3prize.TabIndex = 2;
             this.label3prize.Text = "label4";
             this.label3prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -246,10 +239,9 @@ namespace projektTest
             // label2prize
             // 
             this.label2prize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label2prize.Location = new System.Drawing.Point(12, 615);
-            this.label2prize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2prize.Location = new System.Drawing.Point(16, 757);
             this.label2prize.Name = "label2prize";
-            this.label2prize.Size = new System.Drawing.Size(220, 44);
+            this.label2prize.Size = new System.Drawing.Size(293, 54);
             this.label2prize.TabIndex = 1;
             this.label2prize.Text = "label2";
             this.label2prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -257,10 +249,9 @@ namespace projektTest
             // label1prize
             // 
             this.label1prize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label1prize.Location = new System.Drawing.Point(12, 667);
-            this.label1prize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1prize.Location = new System.Drawing.Point(16, 821);
             this.label1prize.Name = "label1prize";
-            this.label1prize.Size = new System.Drawing.Size(220, 44);
+            this.label1prize.Size = new System.Drawing.Size(293, 54);
             this.label1prize.TabIndex = 0;
             this.label1prize.Text = "label1";
             this.label1prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,11 +264,11 @@ namespace projektTest
             this.panelQuestionAnswer.Controls.Add(this.buttonAnswerD);
             this.panelQuestionAnswer.Controls.Add(this.buttonAnswerC);
             this.panelQuestionAnswer.Controls.Add(this.buttonAnswerB);
-            this.panelQuestionAnswer.Controls.Add(this.ButtonAnswerA);
-            this.panelQuestionAnswer.Location = new System.Drawing.Point(3, 532);
-            this.panelQuestionAnswer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelQuestionAnswer.Controls.Add(this.buttonAnswerA);
+            this.panelQuestionAnswer.Location = new System.Drawing.Point(4, 655);
+            this.panelQuestionAnswer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelQuestionAnswer.Name = "panelQuestionAnswer";
-            this.panelQuestionAnswer.Size = new System.Drawing.Size(530, 217);
+            this.panelQuestionAnswer.Size = new System.Drawing.Size(707, 267);
             this.panelQuestionAnswer.TabIndex = 5;
             // 
             // labelQuestion
@@ -285,14 +276,12 @@ namespace projektTest
             this.labelQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelQuestion.BackColor = System.Drawing.SystemColors.Desktop;
             this.labelQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelQuestion.Location = new System.Drawing.Point(8, 11);
-            this.labelQuestion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelQuestion.Location = new System.Drawing.Point(11, 14);
             this.labelQuestion.Name = "labelQuestion";
-            this.labelQuestion.Size = new System.Drawing.Size(514, 56);
+            this.labelQuestion.Size = new System.Drawing.Size(685, 68);
             this.labelQuestion.TabIndex = 4;
             this.labelQuestion.Text = "Question";
             this.labelQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelQuestion.Click += new System.EventHandler(this.labelQuestion_Click);
             // 
             // timer1
             // 
@@ -303,37 +292,47 @@ namespace projektTest
             // labelClock
             // 
             this.labelClock.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelClock.Location = new System.Drawing.Point(26, 106);
-            this.labelClock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelClock.Location = new System.Drawing.Point(39, 126);
             this.labelClock.Name = "labelClock";
-            this.labelClock.Size = new System.Drawing.Size(53, 30);
+            this.labelClock.Size = new System.Drawing.Size(71, 37);
             this.labelClock.TabIndex = 7;
             this.labelClock.Text = "label1";
             this.labelClock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.labelClock);
+            this.panel1.Location = new System.Drawing.Point(15, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(152, 178);
+            this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 721);
-            this.Controls.Add(this.labelClock);
+            this.ClientSize = new System.Drawing.Size(1039, 887);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelQuestionAnswer);
             this.Controls.Add(this.panelRightSite);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMain";
             this.Text = "question";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.panelRightSite.ResumeLayout(false);
             this.panelQuestionAnswer.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button ButtonAnswerA;
+        private System.Windows.Forms.Button buttonAnswerA;
         private System.Windows.Forms.Button buttonAnswerB;
         private System.Windows.Forms.Button buttonAnswerC;
         private System.Windows.Forms.Button buttonAnswerD;
@@ -354,6 +353,7 @@ namespace projektTest
         private System.Windows.Forms.Label label1prize;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label labelClock;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
