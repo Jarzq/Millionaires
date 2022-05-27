@@ -52,6 +52,7 @@ namespace projektTest
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.labelClock = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelRightSite.SuspendLayout();
             this.panelQuestionAnswer.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,7 +64,7 @@ namespace projektTest
             this.buttonAnswerA.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonAnswerA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAnswerA.ForeColor = System.Drawing.Color.AliceBlue;
-            this.buttonAnswerA.Location = new System.Drawing.Point(11, 85);
+            this.buttonAnswerA.Location = new System.Drawing.Point(17, 101);
             this.buttonAnswerA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerA.Name = "buttonAnswerA";
             this.buttonAnswerA.Size = new System.Drawing.Size(337, 65);
@@ -77,7 +78,7 @@ namespace projektTest
             this.buttonAnswerB.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonAnswerB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAnswerB.ForeColor = System.Drawing.Color.AliceBlue;
-            this.buttonAnswerB.Location = new System.Drawing.Point(353, 85);
+            this.buttonAnswerB.Location = new System.Drawing.Point(359, 101);
             this.buttonAnswerB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerB.Name = "buttonAnswerB";
             this.buttonAnswerB.Size = new System.Drawing.Size(343, 65);
@@ -92,7 +93,7 @@ namespace projektTest
             this.buttonAnswerC.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonAnswerC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAnswerC.ForeColor = System.Drawing.Color.AliceBlue;
-            this.buttonAnswerC.Location = new System.Drawing.Point(11, 155);
+            this.buttonAnswerC.Location = new System.Drawing.Point(17, 171);
             this.buttonAnswerC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerC.Name = "buttonAnswerC";
             this.buttonAnswerC.Size = new System.Drawing.Size(337, 65);
@@ -106,7 +107,7 @@ namespace projektTest
             this.buttonAnswerD.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonAnswerD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAnswerD.ForeColor = System.Drawing.Color.AliceBlue;
-            this.buttonAnswerD.Location = new System.Drawing.Point(353, 155);
+            this.buttonAnswerD.Location = new System.Drawing.Point(359, 171);
             this.buttonAnswerD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerD.Name = "buttonAnswerD";
             this.buttonAnswerD.Size = new System.Drawing.Size(343, 65);
@@ -265,10 +266,10 @@ namespace projektTest
             this.panelQuestionAnswer.Controls.Add(this.buttonAnswerC);
             this.panelQuestionAnswer.Controls.Add(this.buttonAnswerB);
             this.panelQuestionAnswer.Controls.Add(this.buttonAnswerA);
-            this.panelQuestionAnswer.Location = new System.Drawing.Point(4, 655);
+            this.panelQuestionAnswer.Location = new System.Drawing.Point(0, 623);
             this.panelQuestionAnswer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelQuestionAnswer.Name = "panelQuestionAnswer";
-            this.panelQuestionAnswer.Size = new System.Drawing.Size(707, 267);
+            this.panelQuestionAnswer.Size = new System.Drawing.Size(719, 299);
             this.panelQuestionAnswer.TabIndex = 5;
             // 
             // labelQuestion
@@ -276,7 +277,7 @@ namespace projektTest
             this.labelQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelQuestion.BackColor = System.Drawing.SystemColors.Desktop;
             this.labelQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelQuestion.Location = new System.Drawing.Point(11, 14);
+            this.labelQuestion.Location = new System.Drawing.Point(17, 30);
             this.labelQuestion.Name = "labelQuestion";
             this.labelQuestion.Size = new System.Drawing.Size(685, 68);
             this.labelQuestion.TabIndex = 4;
@@ -309,14 +310,28 @@ namespace projektTest
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(257, 185);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.BackgroundImage = global::projektTest.Properties.Resources.Urbanski1;
             this.ClientSize = new System.Drawing.Size(1039, 887);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelQuestionAnswer);
             this.Controls.Add(this.panelRightSite);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMain";
@@ -354,6 +369,7 @@ namespace projektTest
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label labelClock;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

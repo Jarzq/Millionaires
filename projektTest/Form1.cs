@@ -24,11 +24,12 @@ namespace projektTest
             var questionList = game.ReturnQuestionList();
             int questionNumber = game.questionNumber;
             DisplayQuestions(questionList, questionNumber);
+            var urbanski = Image.FromFile(@"img\Urbanski.jpg");
         }
-
+        public virtual System.Drawing.Image urbanski { get; set; }
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            panel1.Hide();
         }
 
         public void DisplayQuestions(List<QuestionModel> questionList, int questionNumber)
@@ -59,6 +60,12 @@ namespace projektTest
         private void buttonAnswerB_Click(object sender, EventArgs e)
         {
             game.CheckClickedAnswer(buttonAnswerB.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel1.Show();
+            tick = 0;
         }
     }
 }
