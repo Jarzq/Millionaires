@@ -19,3 +19,5 @@ C:\Users\Tomasz\Desktop\nowyTest\Millionaires\projektTest\obj\Debug\projektTest.
 C:\Users\Tomasz\Desktop\nowyTest\Millionaires\projektTest\obj\Debug\projektTest.FormMain.resources
 C:\Users\Tomasz\Desktop\projektTest\projektTest\obj\Debug\projektTest.FormMain.resources
 C:\Users\Tomasz\Desktop\projektTest\projektTest\bin\Debug\img\Urbanski.jpg
+C:\Users\Tomasz\Desktop\projektTest\projektTest\obj\Debug\projektTest.FormHello.resources
+C:\Users\Tomasz\Desktop\projektTest\projektTest\obj\Debug\projektTest.FormGameOver.resources

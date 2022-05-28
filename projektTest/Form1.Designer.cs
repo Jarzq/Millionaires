@@ -71,6 +71,7 @@ namespace projektTest
             this.buttonAnswerA.TabIndex = 0;
             this.buttonAnswerA.Text = "button1";
             this.buttonAnswerA.UseVisualStyleBackColor = false;
+            this.buttonAnswerA.Click += new System.EventHandler(this.buttonAnswerA_Click);
             // 
             // buttonAnswerB
             // 
@@ -100,6 +101,7 @@ namespace projektTest
             this.buttonAnswerC.TabIndex = 2;
             this.buttonAnswerC.Text = "button3";
             this.buttonAnswerC.UseVisualStyleBackColor = false;
+            this.buttonAnswerC.Click += new System.EventHandler(this.buttonAnswerC_Click);
             // 
             // buttonAnswerD
             // 
@@ -114,6 +116,7 @@ namespace projektTest
             this.buttonAnswerD.TabIndex = 3;
             this.buttonAnswerD.Text = "button4";
             this.buttonAnswerD.UseVisualStyleBackColor = false;
+            this.buttonAnswerD.Click += new System.EventHandler(this.buttonAnswerD_Click);
             // 
             // panelRightSite
             // 
@@ -140,121 +143,133 @@ namespace projektTest
             // label12prize
             // 
             this.label12prize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label12prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label12prize.Location = new System.Drawing.Point(16, 121);
             this.label12prize.Name = "label12prize";
             this.label12prize.Size = new System.Drawing.Size(293, 54);
             this.label12prize.TabIndex = 11;
-            this.label12prize.Text = "label9";
+            this.label12prize.Text = "1 000 000$";
             this.label12prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11prize
             // 
             this.label11prize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label11prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label11prize.Location = new System.Drawing.Point(16, 185);
             this.label11prize.Name = "label11prize";
             this.label11prize.Size = new System.Drawing.Size(293, 54);
             this.label11prize.TabIndex = 10;
-            this.label11prize.Text = "label10";
+            this.label11prize.Text = "500 000$";
             this.label11prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10prize
             // 
             this.label10prize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label10prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label10prize.Location = new System.Drawing.Point(16, 249);
             this.label10prize.Name = "label10prize";
             this.label10prize.Size = new System.Drawing.Size(293, 54);
             this.label10prize.TabIndex = 9;
-            this.label10prize.Text = "label11";
+            this.label10prize.Text = "250 000$";
             this.label10prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9prize
             // 
             this.label9prize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label9prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label9prize.Location = new System.Drawing.Point(16, 313);
             this.label9prize.Name = "label9prize";
             this.label9prize.Size = new System.Drawing.Size(293, 54);
             this.label9prize.TabIndex = 8;
-            this.label9prize.Text = "label12";
+            this.label9prize.Text = "125 000$";
             this.label9prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8prize
             // 
             this.label8prize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label8prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8prize.Location = new System.Drawing.Point(16, 377);
             this.label8prize.Name = "label8prize";
             this.label8prize.Size = new System.Drawing.Size(293, 54);
             this.label8prize.TabIndex = 7;
-            this.label8prize.Text = "label5";
+            this.label8prize.Text = "75 000$";
             this.label8prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7prize
             // 
             this.label7prize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label7prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7prize.Location = new System.Drawing.Point(16, 441);
             this.label7prize.Name = "label7prize";
             this.label7prize.Size = new System.Drawing.Size(293, 54);
             this.label7prize.TabIndex = 6;
-            this.label7prize.Text = "label6";
+            this.label7prize.Text = "40 000$";
             this.label7prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6prize
             // 
             this.label6prize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label6prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6prize.Location = new System.Drawing.Point(16, 503);
             this.label6prize.Name = "label6prize";
             this.label6prize.Size = new System.Drawing.Size(293, 54);
             this.label6prize.TabIndex = 5;
-            this.label6prize.Text = "label7";
+            this.label6prize.Text = "20 000$";
             this.label6prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5prize
             // 
             this.label5prize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label5prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5prize.Location = new System.Drawing.Point(16, 567);
             this.label5prize.Name = "label5prize";
             this.label5prize.Size = new System.Drawing.Size(293, 54);
             this.label5prize.TabIndex = 4;
-            this.label5prize.Text = "label8";
+            this.label5prize.Text = "10 000$";
             this.label5prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4prize
             // 
             this.label4prize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label4prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4prize.Location = new System.Drawing.Point(16, 630);
             this.label4prize.Name = "label4prize";
             this.label4prize.Size = new System.Drawing.Size(293, 54);
             this.label4prize.TabIndex = 3;
-            this.label4prize.Text = "label3";
+            this.label4prize.Text = "5000$";
             this.label4prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3prize
             // 
             this.label3prize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label3prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3prize.Location = new System.Drawing.Point(16, 694);
             this.label3prize.Name = "label3prize";
             this.label3prize.Size = new System.Drawing.Size(293, 54);
             this.label3prize.TabIndex = 2;
-            this.label3prize.Text = "label4";
+            this.label3prize.Text = "2000$";
             this.label3prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2prize
             // 
             this.label2prize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label2prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2prize.Location = new System.Drawing.Point(16, 757);
             this.label2prize.Name = "label2prize";
             this.label2prize.Size = new System.Drawing.Size(293, 54);
             this.label2prize.TabIndex = 1;
-            this.label2prize.Text = "label2";
+            this.label2prize.Text = "1000$";
             this.label2prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1prize
             // 
             this.label1prize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label1prize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1prize.Location = new System.Drawing.Point(16, 821);
             this.label1prize.Name = "label1prize";
             this.label1prize.Size = new System.Drawing.Size(293, 54);
             this.label1prize.TabIndex = 0;
-            this.label1prize.Text = "label1";
+            this.label1prize.Text = "500$";
             this.label1prize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelQuestionAnswer
