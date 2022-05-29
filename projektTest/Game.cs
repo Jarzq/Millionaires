@@ -10,6 +10,8 @@ namespace projektTest
     
     public class Game
     {
+        Random rnd = new Random();
+
         public int questionNumber = 0;
         public List<QATable> questionList;
         public Game()
@@ -17,10 +19,8 @@ namespace projektTest
             MillionareQuestionsEntities1 db = new MillionareQuestionsEntities1();
             questionList = db.QATable.ToList();
             Initialize();
-
         }
         
-
         public void Initialize()
         {
             
@@ -58,5 +58,27 @@ namespace projektTest
             }
             return countedPrize;
         }
+
+        public List<string> ReturnTwoWrongAnswers(int questionNumber)
+        {
+            List<string> listOfTwoWrongAnswers = new List<string>();
+            var randomInt = rnd.Next(0, 2);
+            if (questionList[questionNumber].AnswerA != questionList[questionNumber].CorrectAnswer)
+                listOfTwoWrongAnswers.Add(questionList[questionNumber].AnswerA);
+            
+            if (questionList[questionNumber].AnswerB != questionList[questionNumber].CorrectAnswer)
+                listOfTwoWrongAnswers.Add(questionList[questionNumber].AnswerB);
+            
+            if (questionList[questionNumber].AnswerC != questionList[questionNumber].CorrectAnswer)
+                listOfTwoWrongAnswers.Add(questionList[questionNumber].AnswerC);
+            
+            if (questionList[questionNumber].AnswerD != questionList[questionNumber].CorrectAnswer)
+                listOfTwoWrongAnswers.Add(questionList[questionNumber].AnswerD);
+
+            listOfTwoWrongAnswers.RemoveAt(randomInt);
+            return listOfTwoWrongAnswers;
+
+        }
+        
     }
 }

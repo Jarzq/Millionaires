@@ -40,9 +40,9 @@ namespace projektTest
             this.buttonStartGame.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonStartGame.Font = new System.Drawing.Font("Franklin Gothic Heavy", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonStartGame.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonStartGame.Location = new System.Drawing.Point(288, 293);
+            this.buttonStartGame.Location = new System.Drawing.Point(305, 286);
             this.buttonStartGame.Name = "buttonStartGame";
-            this.buttonStartGame.Size = new System.Drawing.Size(221, 87);
+            this.buttonStartGame.Size = new System.Drawing.Size(189, 68);
             this.buttonStartGame.TabIndex = 2;
             this.buttonStartGame.Text = "ZAGRAJ";
             this.buttonStartGame.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

@@ -10,9 +10,12 @@ using System.Windows.Forms;
 
 namespace projektTest
 {
+    
     public partial class FormMain : Form
     {
-               
+
+       
+
         Game game = new Game();
 
         Clock clock = new Clock();
@@ -34,26 +37,35 @@ namespace projektTest
             prizesList.Add(label1prize); prizesList.Add(label2prize); prizesList.Add(label3prize); prizesList.Add(label4prize); prizesList.Add(label5prize); prizesList.Add(label6prize);
             prizesList.Add(label7prize); prizesList.Add(label8prize); prizesList.Add(label9prize); prizesList.Add(label10prize); prizesList.Add(label11prize); prizesList.Add(label12prize);
         }
-        public void startGame()
-        {
-            panelQuestionAnswer.Hide();
-        }
+      
         private void Form1_Load(object sender, EventArgs e)
         {
             labelTimeOver.Hide();
+            labelFriendCall.Hide();
+            clock.EndOfTime += OnEndOfTime;
         }
-
+        public void OnEndOfTime()
+        {
+            clock.EndOfTime -= OnEndOfTime;
+            timer1.Stop();
+            labelTimeOver.Show();
+            
+            Refresh();
+            System.Threading.Thread.Sleep(1200);
+            lose();
+           
+        }
         public void DisplayQuestions(List<QATable> questionList, int questionNumber)
         {
             labelQuestion.Text = questionList[questionNumber].Question;
-            buttonAnswerA.Text = questionList[questionNumber].AnswerA;
-            buttonAnswerB.Text = questionList[questionNumber].AnswerB;
-            buttonAnswerC.Text = questionList[questionNumber].AnswerC;
-            buttonAnswerD.Text = questionList[questionNumber].AnswerD;
-            //buttonAnswerD.Text = questionNumber.ToString();
+            buttonAnswerA.Text = questionList[questionNumber].AnswerA; buttonAnswerA.Enabled = true;
+            buttonAnswerB.Text = questionList[questionNumber].AnswerB; buttonAnswerB.Enabled = true;
+            buttonAnswerC.Text = questionList[questionNumber].AnswerC; buttonAnswerC.Enabled = true;
+            buttonAnswerD.Text = questionList[questionNumber].AnswerD; buttonAnswerD.Enabled = true;
 
-            panel1.Show();
+            panelClock.Show();
             tick = 0;
+            labelFriendCall.Hide();
 
         }
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -70,15 +82,6 @@ namespace projektTest
         private void timer1_Tick(object sender, EventArgs e)
         {
             tick+=0.4f;
-            if (tick / 6 > 60)
-            {
-                timer1.Stop();
-                labelTimeOver.Show();
-                Refresh();
-                System.Threading.Thread.Sleep(2000);
-                lose();
-
-            }
             Refresh();
         }
 
@@ -125,19 +128,14 @@ namespace projektTest
                 }
                 System.Threading.Thread.Sleep(1000);
                 button.BackColor = Color.Black;
-                DisplayQuestions(questionList, questionNumber);
-
-                
+                DisplayQuestions(questionList, questionNumber);                
             }
             else
-            {
-                
+            {             
                 button.BackColor = Color.Red;
                 Refresh();
                 
-                lose();
-                
-                
+                lose();             
             }
         }
 
@@ -151,7 +149,63 @@ namespace projektTest
             formGameOver.Show();
         }
 
-        
-        
+        private void button5050_Click(object sender, EventArgs e)
+        {
+            List<string> twoWrongAnswers = new List<string>();
+
+            twoWrongAnswers = game.ReturnTwoWrongAnswers(questionNumber);
+
+            if(buttonAnswerA.Text == twoWrongAnswers[0] || buttonAnswerA.Text == twoWrongAnswers[1])
+                buttonAnswerA.Enabled = false;
+            if (buttonAnswerB.Text == twoWrongAnswers[0] || buttonAnswerB.Text == twoWrongAnswers[1])
+                buttonAnswerB.Enabled = false;
+            if (buttonAnswerC.Text == twoWrongAnswers[0] || buttonAnswerC.Text == twoWrongAnswers[1])
+                buttonAnswerC.Enabled = false;
+            if (buttonAnswerD.Text == twoWrongAnswers[0] || buttonAnswerD.Text == twoWrongAnswers[1])
+                buttonAnswerD.Enabled = false;
+
+
+            DisableHelpButton(button5050);
+
+
+        }
+
+        private void buttonFriendCall_Click(object sender, EventArgs e)
+        {
+
+            string friendAnswer;
+            if ((int)tick % 2 == 0)
+                friendAnswer = questionList[questionNumber].AnswerB;
+            else
+                friendAnswer = questionList[questionNumber].CorrectAnswer;
+
+            labelFriendCall.Text = $"Cześć, wydaje mi się, że odpowiedź '{friendAnswer}' jest poprawna";
+            labelFriendCall.Show();
+
+            DisableHelpButton(buttonFriendCall);
+
+        }
+        private void buttonSkip_Click(object sender, EventArgs e)
+        {
+            questionNumber++;
+            DisplayQuestions(questionList, questionNumber);
+            if (questionNumber == 12)
+            {
+                lose();
+            }
+
+            DisableHelpButton(buttonSkip);
+        }
+
+        private void DisableHelpButton(Button button)
+        {
+            button.Enabled = false;
+            button.BackgroundImage = Image.FromFile(@"C:\Users\Tomasz\Desktop\projektTest\projektTest\img\red.png");
+        }
+
+        private void labelQuestion_MouseHover(object sender, EventArgs e)
+        {
+            button5050.BackColor = Color.BlanchedAlmond;
+        }
     }
 }

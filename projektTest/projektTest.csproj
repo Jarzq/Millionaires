@@ -137,8 +137,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\Milll.jpg" />
+    <Content Include="img\red.png" />
     <Content Include="img\Urbanski.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="MillionareQuestions.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
