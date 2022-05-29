@@ -17,7 +17,7 @@ namespace projektTest
             g.TranslateTransform(55,55);
             g.RotateTransform(180);
             g.RotateTransform(tick);
-            g.FillRectangle(Brushes.Red, 0,0, 3, 40);
+            g.FillRectangle(Brushes.Red, 0 ,0 , 3, 40);
 
             labelClock.Text = (60-(int)(tick / 6)).ToString();
 

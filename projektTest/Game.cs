@@ -71,6 +71,26 @@ namespace projektTest
             return questionList;
         }
 
-
+        public int CountPrize(int questionNumber)
+        {
+            int countedPrize;
+            if(questionNumber>1 && questionNumber<7)
+            {
+                countedPrize = 1000;
+            }
+            else if(questionNumber>=7 && questionNumber<13)
+            {
+                countedPrize = 40000;
+            }
+            else if(questionNumber==13)
+            {
+                countedPrize = 1000000;
+            }
+            else
+            {
+                countedPrize = 0;
+            }
+            return countedPrize;
+        }
     }
 }

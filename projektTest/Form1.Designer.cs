@@ -52,7 +52,7 @@ namespace projektTest
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.labelClock = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.labelTimeOver = new System.Windows.Forms.Label();
             this.panelRightSite.SuspendLayout();
             this.panelQuestionAnswer.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,6 +63,7 @@ namespace projektTest
             this.buttonAnswerA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAnswerA.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonAnswerA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAnswerA.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAnswerA.ForeColor = System.Drawing.Color.AliceBlue;
             this.buttonAnswerA.Location = new System.Drawing.Point(17, 101);
             this.buttonAnswerA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -78,6 +79,7 @@ namespace projektTest
             this.buttonAnswerB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAnswerB.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonAnswerB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAnswerB.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAnswerB.ForeColor = System.Drawing.Color.AliceBlue;
             this.buttonAnswerB.Location = new System.Drawing.Point(359, 101);
             this.buttonAnswerB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -93,6 +95,7 @@ namespace projektTest
             this.buttonAnswerC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAnswerC.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonAnswerC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAnswerC.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAnswerC.ForeColor = System.Drawing.Color.AliceBlue;
             this.buttonAnswerC.Location = new System.Drawing.Point(17, 171);
             this.buttonAnswerC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -108,6 +111,7 @@ namespace projektTest
             this.buttonAnswerD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAnswerD.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonAnswerD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAnswerD.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAnswerD.ForeColor = System.Drawing.Color.AliceBlue;
             this.buttonAnswerD.Location = new System.Drawing.Point(359, 171);
             this.buttonAnswerD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -292,6 +296,7 @@ namespace projektTest
             this.labelQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelQuestion.BackColor = System.Drawing.SystemColors.Desktop;
             this.labelQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelQuestion.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQuestion.Location = new System.Drawing.Point(17, 30);
             this.labelQuestion.Name = "labelQuestion";
             this.labelQuestion.Size = new System.Drawing.Size(685, 68);
@@ -307,7 +312,9 @@ namespace projektTest
             // 
             // labelClock
             // 
-            this.labelClock.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelClock.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelClock.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelClock.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.labelClock.Location = new System.Drawing.Point(39, 126);
             this.labelClock.Name = "labelClock";
             this.labelClock.Size = new System.Drawing.Size(71, 37);
@@ -325,15 +332,19 @@ namespace projektTest
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button1
+            // labelTimeOver
             // 
-            this.button1.Location = new System.Drawing.Point(257, 185);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.labelTimeOver.BackColor = System.Drawing.Color.SlateGray;
+            this.labelTimeOver.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelTimeOver.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTimeOver.ForeColor = System.Drawing.Color.Maroon;
+            this.labelTimeOver.Location = new System.Drawing.Point(86, 313);
+            this.labelTimeOver.Name = "labelTimeOver";
+            this.labelTimeOver.Size = new System.Drawing.Size(573, 134);
+            this.labelTimeOver.TabIndex = 9;
+            this.labelTimeOver.Text = "Niestety czas na odpowiedź minął";
+            this.labelTimeOver.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTimeOver.UseCompatibleTextRendering = true;
             // 
             // FormMain
             // 
@@ -342,7 +353,7 @@ namespace projektTest
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.BackgroundImage = global::projektTest.Properties.Resources.Urbanski1;
             this.ClientSize = new System.Drawing.Size(1039, 887);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.labelTimeOver);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelQuestionAnswer);
             this.Controls.Add(this.panelRightSite);
@@ -384,7 +395,7 @@ namespace projektTest
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label labelClock;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelTimeOver;
     }
 }
 

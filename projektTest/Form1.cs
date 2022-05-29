@@ -41,7 +41,7 @@ namespace projektTest
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            panel1.Hide();
+            labelTimeOver.Hide();
         }
 
         public void DisplayQuestions(List<QuestionModel> questionList, int questionNumber)
@@ -50,9 +50,12 @@ namespace projektTest
             buttonAnswerA.Text = questionList[questionNumber].AnswerA;
             buttonAnswerB.Text = questionList[questionNumber].AnswerB;
             buttonAnswerC.Text = questionList[questionNumber].AnswerC;
-            // buttonAnswerD.Text = questionList[questionNumber].AnswerD;
-            buttonAnswerD.Text = questionNumber.ToString();
-           
+            buttonAnswerD.Text = questionList[questionNumber].AnswerD;
+            //buttonAnswerD.Text = questionNumber.ToString();
+
+            panel1.Show();
+            tick = 0;
+
         }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
@@ -67,6 +70,15 @@ namespace projektTest
         private void timer1_Tick(object sender, EventArgs e)
         {
             tick+=0.4f;
+            if (tick / 6 > 60)
+            {
+                timer1.Stop();
+                labelTimeOver.Show();
+                Refresh();
+                System.Threading.Thread.Sleep(2000);
+                lose();
+
+            }
             Refresh();
         }
 
@@ -74,6 +86,7 @@ namespace projektTest
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             clock.Draw(e.Graphics, tick, labelClock);
+            
         }
 
         private void buttonAnswerA_Click(object sender, EventArgs e)
@@ -94,6 +107,8 @@ namespace projektTest
         }
         private void buttonAnyAnswerClick(Button button)
         {
+            
+
             button.BackColor = Color.Orange;
             Refresh();
             System.Threading.Thread.Sleep(1000);
@@ -114,20 +129,24 @@ namespace projektTest
                 
                 button.BackColor = Color.Red;
                 Refresh();
-                System.Threading.Thread.Sleep(1000);
-                this.Hide();
-                FormGameOver formGameOver = new FormGameOver(questionNumber);
-                formGameOver.Closed += (s, args) => this.Close();
-                formGameOver.Show();
+                
+                lose();
+                
                 
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void lose()
         {
-            panel1.Show();
-            tick = 0;
-            
+            System.Threading.Thread.Sleep(1000);
+            int countedPrize = game.CountPrize(questionNumber);
+            this.Hide();
+            FormGameOver formGameOver = new FormGameOver(countedPrize);
+            formGameOver.Closed += (s, args) => this.Close();
+            formGameOver.Show();
         }
+
+        
+        
     }
 }
