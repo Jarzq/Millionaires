@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MillionareQuestionsModelStoreContainer" CdmEntityContainer="MillionareQuestionsEntities1">
+    <EntitySetMapping Name="QATable">
+      <EntityTypeMapping TypeName="MillionareQuestionsModel.QATable">
+        <MappingFragment StoreEntitySet="QATable">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="AnswerA" ColumnName="AnswerA" />
+          <ScalarProperty Name="AnswerB" ColumnName="AnswerB" />
+          <ScalarProperty Name="AnswerC" ColumnName="AnswerC" />
+          <ScalarProperty Name="AnswerD" ColumnName="AnswerD" />
+          <ScalarProperty Name="CorrectAnswer" ColumnName="CorrectAnswer" />
+          <ScalarProperty Name="IsCorrect" ColumnName="IsCorrect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

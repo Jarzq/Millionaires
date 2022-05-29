@@ -21,3 +21,8 @@ C:\Users\Tomasz\Desktop\projektTest\projektTest\obj\Debug\projektTest.FormMain.r
 C:\Users\Tomasz\Desktop\projektTest\projektTest\bin\Debug\img\Urbanski.jpg
 C:\Users\Tomasz\Desktop\projektTest\projektTest\obj\Debug\projektTest.FormHello.resources
 C:\Users\Tomasz\Desktop\projektTest\projektTest\obj\Debug\projektTest.FormGameOver.resources
+C:\Users\Tomasz\Desktop\projektTest\projektTest\bin\Debug\EntityFramework.dll
+C:\Users\Tomasz\Desktop\projektTest\projektTest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tomasz\Desktop\projektTest\projektTest\bin\Debug\EntityFramework.xml
+C:\Users\Tomasz\Desktop\projektTest\projektTest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tomasz\Desktop\projektTest\projektTest\obj\Debug\projektTest.csproj.CopyComplete

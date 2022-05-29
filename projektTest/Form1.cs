@@ -19,7 +19,7 @@ namespace projektTest
         Clock clock = new Clock();
         public float  tick=0;
         public int questionNumber;
-        public List<QuestionModel> questionList;
+        public List<QATable> questionList;
         List<Label> prizesList = new List<Label>();
 
 
@@ -44,7 +44,7 @@ namespace projektTest
             labelTimeOver.Hide();
         }
 
-        public void DisplayQuestions(List<QuestionModel> questionList, int questionNumber)
+        public void DisplayQuestions(List<QATable> questionList, int questionNumber)
         {
             labelQuestion.Text = questionList[questionNumber].Question;
             buttonAnswerA.Text = questionList[questionNumber].AnswerA;
