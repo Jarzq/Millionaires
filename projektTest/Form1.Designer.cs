@@ -78,7 +78,6 @@ namespace projektTest
             this.buttonAnswerA.Text = "button1";
             this.buttonAnswerA.UseVisualStyleBackColor = false;
             this.buttonAnswerA.Click += new System.EventHandler(this.buttonAnswerA_Click);
-            this.buttonAnswerA.MouseHover += new System.EventHandler(this.labelQuestion_MouseHover);
             // 
             // buttonAnswerB
             // 
@@ -95,7 +94,6 @@ namespace projektTest
             this.buttonAnswerB.Text = "button2";
             this.buttonAnswerB.UseVisualStyleBackColor = false;
             this.buttonAnswerB.Click += new System.EventHandler(this.buttonAnswerB_Click);
-            this.buttonAnswerB.MouseHover += new System.EventHandler(this.labelQuestion_MouseHover);
             // 
             // buttonAnswerC
             // 
@@ -112,7 +110,6 @@ namespace projektTest
             this.buttonAnswerC.Text = "button3";
             this.buttonAnswerC.UseVisualStyleBackColor = false;
             this.buttonAnswerC.Click += new System.EventHandler(this.buttonAnswerC_Click);
-            this.buttonAnswerC.MouseHover += new System.EventHandler(this.labelQuestion_MouseHover);
             // 
             // buttonAnswerD
             // 
@@ -129,7 +126,6 @@ namespace projektTest
             this.buttonAnswerD.Text = "button4";
             this.buttonAnswerD.UseVisualStyleBackColor = false;
             this.buttonAnswerD.Click += new System.EventHandler(this.buttonAnswerD_Click);
-            this.buttonAnswerD.MouseHover += new System.EventHandler(this.labelQuestion_MouseHover);
             // 
             // panelRightSite
             // 
@@ -354,7 +350,6 @@ namespace projektTest
             this.labelQuestion.TabIndex = 4;
             this.labelQuestion.Text = "Question";
             this.labelQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelQuestion.MouseHover += new System.EventHandler(this.labelQuestion_MouseHover);
             // 
             // timer1
             // 
@@ -386,10 +381,10 @@ namespace projektTest
             // 
             // labelTimeOver
             // 
-            this.labelTimeOver.BackColor = System.Drawing.Color.SlateGray;
+            this.labelTimeOver.BackColor = System.Drawing.Color.DarkBlue;
             this.labelTimeOver.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTimeOver.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTimeOver.ForeColor = System.Drawing.Color.Maroon;
+            this.labelTimeOver.ForeColor = System.Drawing.Color.White;
             this.labelTimeOver.Location = new System.Drawing.Point(87, 326);
             this.labelTimeOver.Name = "labelTimeOver";
             this.labelTimeOver.Size = new System.Drawing.Size(573, 134);
@@ -406,7 +401,7 @@ namespace projektTest
             this.labelFriendCall.Name = "labelFriendCall";
             this.labelFriendCall.Size = new System.Drawing.Size(618, 109);
             this.labelFriendCall.TabIndex = 10;
-            this.labelFriendCall.Text = "label1";
+            this.labelFriendCall.Text = "wydaje mi sie, że odpowiedź b jest poprawna";
             this.labelFriendCall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormMain

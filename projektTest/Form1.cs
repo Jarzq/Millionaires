@@ -12,9 +12,7 @@ namespace projektTest
 {
     
     public partial class FormMain : Form
-    {
-
-       
+    {  
 
         Game game = new Game();
 

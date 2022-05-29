@@ -13,19 +13,34 @@ namespace projektTest
         Random rnd = new Random();
 
         public int questionNumber = 0;
+
         public List<QATable> questionList;
+        List<QATable> shuffledList = new List<QATable>();
         public Game()
         {
             MillionareQuestionsEntities1 db = new MillionareQuestionsEntities1();
             questionList = db.QATable.ToList();
+            questionList = ShuffleQuestionList();
             Initialize();
         }
         
         public void Initialize()
         {
             
+        }      
+        private List<QATable> ShuffleQuestionList()
+        {
+            
+            int randomInt;
+            var count = questionList.Count;
+            for (int i=0;i< count; i++)
+            {
+                randomInt = rnd.Next(questionList.Count);
+                shuffledList.Add(questionList[randomInt]);
+                questionList.RemoveAt(randomInt);
+            }
+            return shuffledList;
         }
-        
         public bool CheckClickedAnswer(string answerClicked,int questionNumber)
         {
             if (answerClicked == questionList[questionNumber].CorrectAnswer.ToString()) return true;
@@ -34,7 +49,7 @@ namespace projektTest
 
         public List<QATable> ReturnQuestionList()
         {
-            return questionList;
+            return questionList;          
         }
 
         public int CountPrize(int questionNumber)

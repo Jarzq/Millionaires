@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace projektTest
 {
-    public delegate void Notify();  // delegate
+    public delegate void Notify();  
     class Clock
     {
        
-        public event Notify EndOfTime; // event
+        public event Notify EndOfTime; 
         public void Draw(Graphics g, float tick, Label labelClock)
         {
             
@@ -24,7 +24,7 @@ namespace projektTest
             
             labelClock.Text = (60-(int)(tick / 6)).ToString();
 
-            if(tick/6>10)
+            if(tick/6 > 60)
                 EndOfTime?.Invoke();
 
         }
