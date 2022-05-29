@@ -29,47 +29,63 @@ namespace projektTest
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGameOver));
             this.buttonPlayAgain = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.labelPrizeWon = new System.Windows.Forms.Label();
+            this.buttonWonGrat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonPlayAgain
             // 
-            this.buttonPlayAgain.Location = new System.Drawing.Point(181, 161);
+            this.buttonPlayAgain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.buttonPlayAgain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPlayAgain.Font = new System.Drawing.Font("Liberation Mono", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonPlayAgain.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonPlayAgain.Location = new System.Drawing.Point(218, 275);
             this.buttonPlayAgain.Name = "buttonPlayAgain";
-            this.buttonPlayAgain.Size = new System.Drawing.Size(436, 93);
+            this.buttonPlayAgain.Size = new System.Drawing.Size(363, 53);
             this.buttonPlayAgain.TabIndex = 0;
             this.buttonPlayAgain.Text = "Zagraj jeszcze raz";
-            this.buttonPlayAgain.UseVisualStyleBackColor = true;
+            this.buttonPlayAgain.UseVisualStyleBackColor = false;
             this.buttonPlayAgain.Click += new System.EventHandler(this.buttonPlayAgain_Click);
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(178, 279);
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExit.Font = new System.Drawing.Font("Liberation Mono", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonExit.Location = new System.Drawing.Point(276, 358);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(439, 99);
+            this.buttonExit.Size = new System.Drawing.Size(253, 46);
             this.buttonExit.TabIndex = 1;
             this.buttonExit.Text = "Wyjdz z gry";
-            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
-            // labelPrizeWon
+            // buttonWonGrat
             // 
-            this.labelPrizeWon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelPrizeWon.Location = new System.Drawing.Point(97, 49);
-            this.labelPrizeWon.Name = "labelPrizeWon";
-            this.labelPrizeWon.Size = new System.Drawing.Size(649, 104);
-            this.labelPrizeWon.TabIndex = 2;
-            this.labelPrizeWon.Text = "gratki";
+            this.buttonWonGrat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.buttonWonGrat.Font = new System.Drawing.Font("Liberation Mono", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonWonGrat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonWonGrat.Location = new System.Drawing.Point(124, 44);
+            this.buttonWonGrat.Name = "buttonWonGrat";
+            this.buttonWonGrat.Size = new System.Drawing.Size(542, 53);
+            this.buttonWonGrat.TabIndex = 3;
+            this.buttonWonGrat.Text = "GRatulacje wygrales 272772\r\n";
+            this.buttonWonGrat.UseVisualStyleBackColor = false;
             // 
             // FormGameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.labelPrizeWon);
+            this.Controls.Add(this.buttonWonGrat);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonPlayAgain);
+            this.DoubleBuffered = true;
             this.Name = "FormGameOver";
             this.Text = "FormGameOver";
             this.Load += new System.EventHandler(this.FormGameOver_Load);
@@ -81,6 +97,6 @@ namespace projektTest
 
         private System.Windows.Forms.Button buttonPlayAgain;
         private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.Label labelPrizeWon;
+        private System.Windows.Forms.Button buttonWonGrat;
     }
 }

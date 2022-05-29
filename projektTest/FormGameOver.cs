@@ -31,7 +31,12 @@ namespace projektTest
 
         private void FormGameOver_Load(object sender, EventArgs e)
         {
-            labelPrizeWon.Text = $"Gratulacje wygrales {wonAmount}$";
+            buttonWonGrat.Text = $"Gratulacje wygrales {wonAmount}$";
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

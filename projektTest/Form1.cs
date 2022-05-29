@@ -113,7 +113,9 @@ namespace projektTest
             {
                 
                 button.BackColor = Color.Red;
-                
+                Refresh();
+                System.Threading.Thread.Sleep(1000);
+                this.Hide();
                 FormGameOver formGameOver = new FormGameOver(questionNumber);
                 formGameOver.Closed += (s, args) => this.Close();
                 formGameOver.Show();
