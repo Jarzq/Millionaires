@@ -44,11 +44,11 @@ namespace projektTest
             {
                 countedPrize = 1000;
             }
-            else if(questionNumber>=7 && questionNumber<13)
+            else if(questionNumber>=7 && questionNumber<12)
             {
                 countedPrize = 40000;
             }
-            else if(questionNumber==13)
+            else if(questionNumber==12)
             {
                 countedPrize = 1000000;
             }

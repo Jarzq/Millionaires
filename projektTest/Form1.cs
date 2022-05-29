@@ -12,8 +12,7 @@ namespace projektTest
 {
     public partial class FormMain : Form
     {
-        
-        
+               
         Game game = new Game();
 
         Clock clock = new Clock();
@@ -63,7 +62,8 @@ namespace projektTest
             if ((questionNumber - 1) >= 0) {
                 prizesList[questionNumber - 1].BackColor = Color.DodgerBlue;
             }
-            prizesList[questionNumber].BackColor = Color.Orange;
+            if(questionNumber<12)
+                prizesList[questionNumber].BackColor = Color.Orange;
 
         }
 
@@ -115,14 +115,19 @@ namespace projektTest
 
             if (game.CheckClickedAnswer(button.Text, questionNumber) == true)
             {
+                
                 questionNumber++;
                 button.BackColor = Color.Green;
                 Refresh();
+                if (questionNumber == 12)
+                {
+                    lose();
+                }
                 System.Threading.Thread.Sleep(1000);
                 button.BackColor = Color.Black;
                 DisplayQuestions(questionList, questionNumber);
 
-
+                
             }
             else
             {

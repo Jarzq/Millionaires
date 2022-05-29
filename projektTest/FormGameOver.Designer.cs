@@ -59,7 +59,7 @@ namespace projektTest
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(253, 46);
             this.buttonExit.TabIndex = 1;
-            this.buttonExit.Text = "Wyjdz z gry";
+            this.buttonExit.Text = "Wyjdź z gry";
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
@@ -68,11 +68,11 @@ namespace projektTest
             this.buttonWonGrat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.buttonWonGrat.Font = new System.Drawing.Font("Liberation Mono", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonWonGrat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonWonGrat.Location = new System.Drawing.Point(124, 44);
+            this.buttonWonGrat.Location = new System.Drawing.Point(119, 44);
             this.buttonWonGrat.Name = "buttonWonGrat";
-            this.buttonWonGrat.Size = new System.Drawing.Size(542, 53);
+            this.buttonWonGrat.Size = new System.Drawing.Size(582, 53);
             this.buttonWonGrat.TabIndex = 3;
-            this.buttonWonGrat.Text = "GRatulacje wygrales 272772\r\n";
+            this.buttonWonGrat.Text = "Gratulacje wygrałeś 1000000$\r\n";
             this.buttonWonGrat.UseVisualStyleBackColor = false;
             // 
             // FormGameOver
