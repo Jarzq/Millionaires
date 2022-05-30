@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -198,12 +199,27 @@ namespace projektTest
         private void DisableHelpButton(Button button)
         {
             button.Enabled = false;
-            button.BackgroundImage = Image.FromFile(@"C:\Users\Tomasz\Desktop\projektTest\projektTest\img\red.png");
+            button.BackgroundImage = Image.FromFile(@"C:\Users\Tomasz\Desktop\projektJIPP\projektTest\img\red.png");
         }
 
         private void labelQuestion_MouseHover(object sender, EventArgs e)
         {
             button5050.BackColor = Color.BlanchedAlmond;
+        }
+
+        private async void  buttonSaveToFile_Click(object sender, EventArgs e)
+        {
+           await WriteToFileAsync();
+        }
+
+        private async Task WriteToFileAsync()
+        {
+            string filename = @"C:\Users\Tomasz\Desktop\projektJIPP\projektTest\Files\YourQuestions.txt";
+
+            using (StreamWriter outputFile = new StreamWriter(filename,true))
+            {
+                await outputFile.WriteAsync($"{questionList[questionNumber].Question}\n");
+            }
         }
     }
 }

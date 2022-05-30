@@ -58,6 +58,7 @@ namespace projektTest
             this.panelClock = new System.Windows.Forms.Panel();
             this.labelTimeOver = new System.Windows.Forms.Label();
             this.labelFriendCall = new System.Windows.Forms.Label();
+            this.buttonSaveToFile = new System.Windows.Forms.Button();
             this.panelRightSite.SuspendLayout();
             this.panelQuestionAnswer.SuspendLayout();
             this.panelClock.SuspendLayout();
@@ -404,12 +405,24 @@ namespace projektTest
             this.labelFriendCall.Text = "wydaje mi sie, że odpowiedź b jest poprawna";
             this.labelFriendCall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonSaveToFile
+            // 
+            this.buttonSaveToFile.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonSaveToFile.Location = new System.Drawing.Point(12, 583);
+            this.buttonSaveToFile.Name = "buttonSaveToFile";
+            this.buttonSaveToFile.Size = new System.Drawing.Size(191, 35);
+            this.buttonSaveToFile.TabIndex = 11;
+            this.buttonSaveToFile.Text = "Zapisz to pytanie do pliku";
+            this.buttonSaveToFile.UseVisualStyleBackColor = false;
+            this.buttonSaveToFile.Click += new System.EventHandler(this.buttonSaveToFile_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::projektTest.Properties.Resources.Urbanski1;
             this.ClientSize = new System.Drawing.Size(1039, 887);
+            this.Controls.Add(this.buttonSaveToFile);
             this.Controls.Add(this.labelFriendCall);
             this.Controls.Add(this.labelTimeOver);
             this.Controls.Add(this.panelClock);
@@ -458,6 +471,7 @@ namespace projektTest
         private System.Windows.Forms.Button buttonFriendCall;
         private System.Windows.Forms.Button button5050;
         private System.Windows.Forms.Label labelFriendCall;
+        private System.Windows.Forms.Button buttonSaveToFile;
     }
 }
 
